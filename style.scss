@@ -1,0 +1,46 @@
+html{
+  font-size:67.5%;
+}
+
+.mobile-menu-icon{
+  background-color:transparent;
+  border:none;
+  outline:none;
+  user-select: none !important;
+  cursor:pointer;
+
+  & > span{
+    display:block;
+    background-color:black;
+    width:3.5rem;
+    height:0.3rem;
+    margin-bottom:0.9rem;
+
+    transition:transform .7s;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+}
+
+.menu-open{
+  background-color:black;
+
+  & .mobile-menu-icon{
+    & > span{
+      background-color:white;
+
+      &:nth-child(1){
+        transform:translateY(1.2rem) rotate(135deg);
+      }
+
+      &:nth-child(2){
+        transform:translateX(-1.8rem) scaleX(0);
+      }
+
+      &:nth-child(3){
+        transform:translateY(-1.2rem) rotate(-135deg);
+      }
+    }
+  }
+}
